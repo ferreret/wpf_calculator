@@ -32,12 +32,8 @@ namespace Calculator
 
         private void pointButton_Click(object sender, RoutedEventArgs e)
         {
-            if (resultLabel.Content.ToString().Contains("."))
-            {
-                return;
-            }   
-
-            resultLabel.Content = $"{resultLabel.Content}.";
+            if (!resultLabel.Content.ToString().Contains('.'))
+                resultLabel.Content += ".";
         }
 
         private void equalButton_Click(object sender, RoutedEventArgs e)
@@ -121,17 +117,17 @@ namespace Calculator
             if (sender == multiplyButton)
                 operation = Operation.Multiply;
             
-            if (sender == divisionButton)
+            else if (sender == divisionButton)
                 operation = Operation.Divide;
             
-            if (sender == plusButton)
+            else if (sender == plusButton)
                 operation = Operation.Add;
             
-            if (sender == minusButton)
+            else if (sender == minusButton)
                 operation = Operation.Subtract;
-            
-        }   
+        }
     }
+
     public enum Operation
     {
         Add,
