@@ -117,17 +117,17 @@ namespace Calculator
             if (sender == multiplyButton)
                 operation = Operation.Multiply;
             
-            if (sender == divisionButton)
+            else if (sender == divisionButton)
                 operation = Operation.Divide;
             
-            if (sender == plusButton)
+            else if (sender == plusButton)
                 operation = Operation.Add;
             
-            if (sender == minusButton)
+            else if (sender == minusButton)
                 operation = Operation.Subtract;
-            
-        }   
+        }
     }
+
     public enum Operation
     {
         Add,
