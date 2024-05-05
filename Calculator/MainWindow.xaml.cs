@@ -32,12 +32,8 @@ namespace Calculator
 
         private void pointButton_Click(object sender, RoutedEventArgs e)
         {
-            if (resultLabel.Content.ToString().Contains("."))
-            {
-                return;
-            }   
-
-            resultLabel.Content = $"{resultLabel.Content}.";
+            if (!resultLabel.Content.ToString().Contains('.'))
+                resultLabel.Content += ".";
         }
 
         private void equalButton_Click(object sender, RoutedEventArgs e)
